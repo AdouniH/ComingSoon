@@ -1,0 +1,36 @@
+
+* {
+margin: 0;
+padding: 0;
+}
+
+.email{
+  display: flex;
+  padding: 15px;
+  width: 100%;
+}
+
+
+.title{
+  margin: auto;
+  width: 12%;
+}
+.submitbutton{
+  margin: auto;
+  width: 12%;
+}
+
+.emailbody{
+  margin: auto;
+  width: 60%;
+}
+
+.central{
+  background-color: grey;
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+}
