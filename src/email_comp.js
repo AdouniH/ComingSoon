@@ -1,5 +1,6 @@
 import React from 'react';
 import './email.css';
+import axios from 'axios';
 
 class Email extends React.Component {
   constructor(props) {
@@ -17,17 +18,21 @@ class Email extends React.Component {
 
   mySubmitHandler = (event) => {
     event.preventDefault();
-    alert("hello " + this.state.mail);
+
+    axios.post('http://localhost:8000/email/', {'email': this.state.mail})
+      .then(res => {
+        console.log(res.data);
+      })
   }
 
   render() {
     return(
-        <div class='central'>
+        <div className='central'>
           <form onSubmit={this.mySubmitHandler}>
-          <div class='email'>
-              <div class='title'>Entrez votre mail</div>
-              <input class='emailbody'type="email" name="mail" value={this.state.mail} onChange={this.myChangeHandler}></input>
-              <input class='submitbutton' type="submit" value="Envoyer"></input>
+          <div className='email'>
+              <div className='title'>Entrez votre mail</div>
+              <input className='emailbody'type="email" name="mail" value={this.state.mail} onChange={this.myChangeHandler}></input>
+              <input className='submitbutton' type="submit" value="Envoyer"></input>
           </div>
           </form>
         </div>
