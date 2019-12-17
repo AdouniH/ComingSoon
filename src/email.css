@@ -4,6 +4,12 @@ margin: 0;
 padding: 0;
 }
 
+body {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .email{
   display: flex;
   padding: 15px;
@@ -34,11 +40,28 @@ padding: 0;
 }
 
 .central{
-  background-color: grey;
-  position: absolute;
+  background-image: url("background.jpg");
+  position: relative;
   width: 60%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 12px;
+  margin-top: 200px;
+}
+
+.success{
+    background-color: #334408;
+    text-align: center;
+    margin: auto;
+    height: 35px;
+}
+
+#su{
+  position: relative;
+  font-size: 20px;
+  height: 60%;
+  width: 60%;
+  margin: auto;
+  color: white;
 }
